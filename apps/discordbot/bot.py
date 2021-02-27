@@ -48,9 +48,7 @@ class CSUAClient(discord.Client):
                 validate_email(msg.content)
                 if "@berkeley.edu" in msg.content:
                     got_email = True
-                    await channel.send(
-                        f"Sending a an email to verify {user.name} to {msg.content}"
-                    )
+                    await channel.send(f"Sending a an email to verify {user.name} to {msg.content}")
                     send_verify_mail(msg.content, user.name + "#" + user.discriminator)
                 else:
                     await channel.send(
