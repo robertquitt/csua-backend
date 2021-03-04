@@ -1,12 +1,10 @@
 import asyncio
 import json
+from unittest.mock import MagicMock, Mock, call
 
-from django.test import TestCase
-from unittest.mock import Mock, MagicMock, call
-
-from pyfiglet import figlet_format
 import cowpy
-
+from django.test import TestCase
+from pyfiglet import figlet_format
 
 from .bot import CSUAClient, emoji_letters
 
